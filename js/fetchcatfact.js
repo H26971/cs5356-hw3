@@ -20,3 +20,22 @@ function fetchCatFact() {
 }
 
 document.addEventListener('DOMContentLoaded', fetchCatFact);
+
+function enableImageFollowEffect() {
+    const image = document.querySelector('img');
+
+    image.addEventListener('mousemove', (event) => {
+        const { offsetX, offsetY } = event;
+        const moveX = (offsetX / image.clientWidth) * 10 - 5;  
+        const moveY = (offsetY / image.clientHeight) * 10 - 5;
+
+        image.style.transform = `translate(${moveX}px, ${moveY}px)`;
+    });
+
+    image.addEventListener('mouseleave', () => {
+        image.style.transform = 'translate(0, 0)';  
+    });
+}
+
+document.addEventListener('DOMContentLoaded', enableImageFollowEffect);
+
