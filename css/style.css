@@ -49,6 +49,11 @@ nav a:hover {
     text-decoration: underline;
 }
 
+
+body {
+    transition: background-color 0.2s ease-in-out;
+}
+
 footer {
     margin-top: 40px;
     text-align: center;

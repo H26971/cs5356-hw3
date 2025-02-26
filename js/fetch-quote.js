@@ -1,28 +1,31 @@
-function fetchCatFact() {
-    const factElement = document.getElementById('random-cat-fact');
-    const buttonElement = document.querySelector('button');
+function fetchQuote() {
+    const quoteElement = document.getElementById('random-quote'); 
+    const buttonElement = document.getElementById('quote-button');
 
-    factElement.innerText = 'Loading a fun cat fact... 🐾';
+    quoteElement.innerText = 'Loading an inspirational quote... ✨';
     buttonElement.disabled = true; 
 
-    fetch('https://catfact.ninja/fact')
+    fetch('https://api.quotable.io/random') 
         .then(response => response.json())
         .then(data => {
-            factElement.innerText = `🐾 Fun Fact: ${data.fact}`;
+            quoteElement.innerText = `💡 "${data.content}" - ${data.author}`;
         })
         .catch(error => {
-            console.error('Failed to fetch cat fact:', error);
-            factElement.innerText = 'Failed to fetch a new fact. Please try again later.';
+            console.error('Failed to fetch quote:', error);
+            quoteElement.innerText = 'Failed to fetch a new quote. Please try again later.';
         })
         .finally(() => {
             buttonElement.disabled = false; 
         });
 }
 
-document.addEventListener('DOMContentLoaded', fetchCatFact);
+document.addEventListener("DOMContentLoaded", () => {
+    fetchQuote();
+    document.getElementById("quote-button").addEventListener("click", fetchQuote);
+});
 
 function enableImageFollowEffect() {
-    const image = document.querySelector('img');
+    const image = document.getElementById('profile-image');
 
     image.addEventListener('mousemove', (event) => {
         const { offsetX, offsetY } = event;
