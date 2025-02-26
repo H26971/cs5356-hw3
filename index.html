@@ -2,40 +2,32 @@
 <html lang="en">
 
 <head>
-    <meta name="description" content="A fun homepage about my cat DUODUO.">
-    <meta name="HANQI" content="HANQI">
+    <meta name="description" content="Welcome to my personal homepage!">
+    <meta name="author" content="HANQI">
 
-    <meta property="og:title" content="DUODUO - The Cutest Cat">
-    <meta property="og:description" content="Explore DUODUO's world! Cute pictures, fun cat facts, and more.">
-    <meta property="og:image" content="https://h26971.github.io/cs5356-hw3/images/my-cat.jpg">
+    <meta property="og:title" content="HANQI - Personal Homepage">
+    <meta property="og:description" content="Learn more about me, my interests, and my journey!">
+    <meta property="og:image" content="https://h26971.github.io/cs5356-hw3/images/my-photo.jpg">
     <meta property="og:url" content="https://h26971.github.io/cs5356-hw3/">
     <meta property="og:type" content="website">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="DUODUO - The Cutest Cat">
-    <meta name="twitter:description" content="Meet DUODUO and discover random cat facts and hidden talents.">
-    <meta name="twitter:image" content="https://h26971.github.io/cs5356-hw3/images/my-cat.jpg">
+    <meta name="twitter:title" content="HANQI - Personal Homepage">
+    <meta name="twitter:description" content="A brief introduction about me, my skills, and interests.">
+    <meta name="twitter:image" content="https://h26971.github.io/cs5356-hw3/images/my-photo.jpg">
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Cat's Homepage</title>
+    <title>My Personal Homepage</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-S0VC711282"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-S0VC711282');
-</script>
-
 <body>
     <header>
-        <h1>Welcome to My Cat's Homepage!</h1>
+        <h1>Welcome to My Personal Homepage!</h1>
         <nav>
             <ul>
-                <li><a href="#about-cat">About</a></li>
+                <li><a href="#about-me">About</a></li>
                 <li><a href="#fun-facts">Fun Facts</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -43,52 +35,61 @@
     </header>
 
     <main>
-        <!-- About Section -->
-        <article id="about-cat">
-            <h2>About My Cat</h2>
-            <p>This is my cat, and his name is <strong>DUODUO</strong>. He’s a very cute cat who loves sunbathing, napping, and playing with yarn balls.</p>
-            <p>DUODUO is 8 years old, has a gentle personality, and is very friendly. If you sit next to him, there’s a good chance he’ll jump onto your lap and fall asleep.</p>
-            <img src="images/my-cat.jpg" alt="My cat DUODUO" width="300">
+        <!-- About Me Section -->
+        <article id="about-me">
+            <h2>About Me</h2>
+            <p>Hi, I'm <strong>HANQI</strong>. I'm passionate about technology, web development, and solving real-world problems through code.</p>
+            <p>Currently, I'm studying computer science and working on various projects related to data science and AI.</p>
+            <img id="profile-image" src="images/my-photo.jpg" alt="A photo of me" width="300">
         </article>
 
-        <!-- Fun Facts Section -->
         <article id="fun-facts">
-            <h2>Fun Facts</h2>
+            <h2>Fun Facts About Me</h2>
             <ul>
-                <li>DUODUO's favorite food is shrimp.</li>
-                <li>He once chewed up my brand-new headphones.</li>
-                <li>He runs around the house at 3 AM every day, waking me up.</li>
+                <li>I love learning new programming languages and building web applications.</li>
+                <li>One of my hobbies is photography.</li>
+                <li>I enjoy traveling and experiencing different cultures.</li>
             </ul>
         </article>
 
-        <article id="duoduo-story">
-            <h2>DUODUO's Hidden Talents</h2>
+        <article id="hidden-talents">
+            <h2>My Hidden Talents</h2>
             <details>
-                <summary>Click here to reveal DUODUO's secret skills!</summary>
-                <p>DUODUO is not just cute—he can also perform some impressive tricks:</p>
+                <summary>Click here to discover my hidden skills!</summary>
+                <p>Here are some things I enjoy and excel at:</p>
                 <ul>
-                    <li>Can open doors by himself.</li>
-                    <li>Understands basic voice commands like "sit" and "come."</li>
-                    <li>Loves fetching small toys like a dog.</li>
+                    <li>Building websites and web applications.</li>
+                    <li>Problem-solving with algorithms and data structures.</li>
+                    <li>Cooking 🍳— I make an amazing homemade pizza!</li>
                 </ul>
             </details>
         </article>
 
-        <article id="cat-fact-section">
-            <h2>Random Cat Fact</h2>
-            <p id="random-cat-fact">Loading a fun cat fact...</p>
-            <button onclick="fetchCatFact()">Get Another Fact</button>
+        <article id="random-quote-section">
+            <h2>Inspirational Quote</h2>
+            <p id="random-quote">Loading an inspiring quote...</p>
+            <button id="quote-button">Get Another Quote</button>
         </article>
-    </main>
+    </main> 
 
     <footer id="contact">
-        <p>&copy; 2025 DUODUO's Homepage</p>
-        <p>Contact me at: <a href="cat@example.com">cat@example.com</a></p>
+        <p>&copy; 2025 HANQI's Personal Homepage</p>
+        <p>Contact me at: <a href="mailto:hanqi@example.com">hanqi@example.com</a></p>
     </footer>
-<script src="js/fetchcatfact.js"></script>
-<script src="js/mouse-tracker.js"></script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S0VC711282"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-S0VC711282');
+    </script>
+
+    <script src="js/fetch-quote.js"></script>
+    <script src="js/mouse-tracker.js"></script>
 </body>
 </html>
+
 
 
 
