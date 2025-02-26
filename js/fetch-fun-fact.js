@@ -1,18 +1,18 @@
-function fetchQuote() {
-    const quoteElement = document.getElementById('random-quote'); 
-    const buttonElement = document.getElementById('quote-button');
+function fetchFunFact() {
+    const factElement = document.getElementById('random-fun'); 
+    const buttonElement = document.getElementById('fun-button');
 
-    quoteElement.innerText = 'Loading an inspirational quote... ✨';
+    factElement.innerText = '🐾 Fetching a fun cat fact...';
     buttonElement.disabled = true; 
 
-    fetch('https://api.quotable.io/random') 
+    fetch('https://catfact.ninja/fact') 
         .then(response => response.json())
         .then(data => {
-            quoteElement.innerText = `💡 "${data.content}" - ${data.author}`;
+            factElement.innerText = `🐱 ${data.fact}`;
         })
         .catch(error => {
-            console.error('Failed to fetch quote:', error);
-            quoteElement.innerText = 'Failed to fetch a new quote. Please try again later.';
+            console.error('Failed to fetch fun fact:', error);
+            factElement.innerText = '⚠️ Failed to fetch a new fun fact. Please try again later.';
         })
         .finally(() => {
             buttonElement.disabled = false; 
@@ -20,9 +20,13 @@ function fetchQuote() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    fetchQuote();
-    document.getElementById("quote-button").addEventListener("click", fetchQuote);
+    fetchFunFact(); 
+    const button = document.getElementById("fun-button");
+    if (button) {
+        button.addEventListener("click", fetchFunFact);
+    }
 });
+
 
 function enableImageFollowEffect() {
     const image = document.getElementById('profile-image');
